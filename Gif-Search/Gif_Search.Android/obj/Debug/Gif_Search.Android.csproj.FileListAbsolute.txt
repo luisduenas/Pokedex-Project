@@ -1,0 +1,6 @@
+C:\Users\Luis Dueñas\Documents\Visual Studio 2017\Projects\Gif-Search\Gif-Search\Gif_Search.Android\obj\Debug\Gif_Search.Android.csprojResolveAssemblyReference.cache
+C:\Users\Luis Dueñas\Documents\Visual Studio 2017\Projects\Gif-Search\Gif-Search\Gif_Search.Android\obj\Debug\Gif_Search.Droid.App.xaml.g.cs
+C:\Users\Luis Dueñas\Documents\Visual Studio 2017\Projects\Gif-Search\Gif-Search\Gif_Search.Android\obj\Debug\Gif_Search.Droid.Views.AboutPage.xaml.g.cs
+C:\Users\Luis Dueñas\Documents\Visual Studio 2017\Projects\Gif-Search\Gif-Search\Gif_Search.Android\obj\Debug\Gif_Search.Droid.Views.ItemsPage.xaml.g.cs
+C:\Users\Luis Dueñas\Documents\Visual Studio 2017\Projects\Gif-Search\Gif-Search\Gif_Search.Android\obj\Debug\Gif_Search.Droid.Views.ItemDetailPage.xaml.g.cs
+C:\Users\Luis Dueñas\Documents\Visual Studio 2017\Projects\Gif-Search\Gif-Search\Gif_Search.Android\obj\Debug\Gif_Search.Droid.Views.NewItemPage.xaml.g.cs
