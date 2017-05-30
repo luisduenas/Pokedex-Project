@@ -38,7 +38,29 @@ namespace Gif_Search.ViewModels
 			Title = "Browse";
 			Items = new ObservableRangeCollection<Item>();
             SearchCommand = new Command(async () => await ExecuteSearchCommand());
+            getPokemonSource();
 		}
+
+        private async void getPokemonSource()
+        {
+            try
+            {
+                Items.Clear();
+                API_Conection conexion = new API_Conection();
+                var items = await conexion.getApiResults(SearchText);
+                Items.ReplaceRange(items);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                MessagingCenter.Send(new MessagingCenterAlert
+                {
+                    Title = "Error",
+                    Message = "Unable to load items.",
+                    Cancel = "OK"
+                }, "message");
+            }
+        }
 
         async Task ExecuteSearchCommand()
 		{
@@ -47,7 +69,6 @@ namespace Gif_Search.ViewModels
                 try
                 {
                     Items.Clear();
-                    //var items = await DataStore.GetItemsAsync(true);
                     API_Conection conexion = new API_Conection();
                     var items = await conexion.getApiResults(SearchText);
                     Items.ReplaceRange(items);

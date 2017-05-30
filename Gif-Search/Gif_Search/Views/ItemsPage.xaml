@@ -9,8 +9,7 @@
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <StackLayout>
-            <SearchBar Text="{Binding SearchText}"
-                       SearchCommand="{Binding SearchCommand}"></SearchBar>
+            <Picker ItemsSource="{Binding PokemonSource}" SelectedItem="{Binding SelectedPokemon}"></Picker>
       <ListView x:Name="ItemsListView"
 				ItemsSource="{Binding Items}"
                 VerticalOptions="FillAndExpand"
@@ -23,15 +22,20 @@
           <DataTemplate>
             <ViewCell>
               <StackLayout Padding="10">
-                <Label Text="{Binding Text}"
+                                <Image Source="{Binding Source}"></Image>
+                <Label Text="{Binding Name}"
                        LineBreakMode="NoWrap"
                        Style="{DynamicResource ListItemTextStyle}"
                        FontSize="16"/>
-                <Label Text="{Binding Description}"
+                <Label Text="{Binding Type1}"
                        LineBreakMode="NoWrap"
                        Style="{DynamicResource ListItemDetailTextStyle}"
                        FontSize="13"/>
-              </StackLayout>
+                                <Label Text="{Binding Type2}"
+                       LineBreakMode="NoWrap"
+                       Style="{DynamicResource ListItemDetailTextStyle}"
+                       FontSize="13"/>
+                            </StackLayout>
             </ViewCell>
           </DataTemplate>
         </ListView.ItemTemplate>

@@ -24258,18 +24258,18 @@
     "UAP,Version=v10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Luis Dueñas\\.nuget\\packages\\": {}
+    "C:\\Users\\Luis Duenas\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\Luis Dueñas\\Documents\\Visual Studio 2017\\Projects\\Gif-Search\\Gif-Search\\Gif_Search.UWP\\Gif_Search.UWP.csproj",
+      "projectUniqueName": "C:\\Gif-Search\\Gif-Search\\Gif_Search.UWP\\Gif_Search.UWP.csproj",
       "projectName": "Gif_Search.UWP",
-      "projectPath": "C:\\Users\\Luis Dueñas\\Documents\\Visual Studio 2017\\Projects\\Gif-Search\\Gif-Search\\Gif_Search.UWP\\Gif_Search.UWP.csproj",
-      "projectJsonPath": "C:\\Users\\Luis Dueñas\\Documents\\Visual Studio 2017\\Projects\\Gif-Search\\Gif-Search\\Gif_Search.UWP\\project.json",
+      "projectPath": "C:\\Gif-Search\\Gif-Search\\Gif_Search.UWP\\Gif_Search.UWP.csproj",
+      "projectJsonPath": "C:\\Gif-Search\\Gif-Search\\Gif_Search.UWP\\project.json",
       "projectStyle": "ProjectJson"
     },
     "dependencies": {
-      "Fody": "[2.0.0, )",
+      "Fody": "2.0.0",
       "Microsoft.CSharp": "4.3.0",
       "Microsoft.NETCore.Platforms": "1.1.0",
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",

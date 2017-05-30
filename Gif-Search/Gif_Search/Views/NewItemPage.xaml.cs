@@ -16,7 +16,7 @@ namespace Gif_Search.Views
 
 			Item = new Item
 			{
-				Text = "Item name",
+				Name = "Item name",
 				Description = "This is a nice description"
 			};
 

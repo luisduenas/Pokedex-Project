@@ -17,7 +17,7 @@ namespace Gif_Search.Services
     {
         public async Task<ObservableCollection<Item>> getApiResults(string searchText)
         {
-            var uri = new Uri("http://api.giphy.com/v1/gifs/search?q=" + searchText + "&api_key=dc6zaTOxFJmzC&limit=100&lang=es");
+            var uri = new Uri("https://api.myjson.com/bins/1c5nwx");
             Rootobject root;
             string results = string.Empty;
             ObservableCollection<Item> items = new ObservableCollection<Item>();
@@ -28,9 +28,9 @@ namespace Gif_Search.Services
             dynamic jo = JObject.Parse(responseBody);
             root = jo.ToObject<Rootobject>();
 
-            foreach (var data in root.data)
+            foreach (var data in root.pokemon)
             {
-                items.Add(new Item { Id = Guid.NewGuid().ToString(), Text = data.slug, Description = data.username, Source = data.images.original.url });
+                items.Add(new Item { Id = Guid.NewGuid().ToString(), Name = "Nombre: " + data.name, Height = "Estatura: " + data.height, Weight = "Peso: " + data.weight, Weaknesses = data.weaknesses, Type1 = "Tipo 1: " + data.type[0], Type2 =  data.type.Length > 1 ? "Tipo 2: " + data.type[1] : "Tipo 2: -----", Source = data.img });
             }
             return items;
         }
