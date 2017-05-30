@@ -1,2 +1,0 @@
-android.app.Application
-com.companyname.Gif_Search

@@ -1,1 +1,0 @@
-C:\Users\Luis Dueñas\Documents\Visual Studio 2017\Projects\Gif-Search\Gif-Search\Gif_Search.UWP\Gif_Search.UWP.csproj;x86
