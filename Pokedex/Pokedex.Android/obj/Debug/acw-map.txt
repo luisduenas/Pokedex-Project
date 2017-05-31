@@ -2,6 +2,10 @@ Pokedex.Droid.MainActivity, Gif_Search.Android;md576290e4b9fc65ea13d4138b2a4858d
 Pokedex.Droid.MainActivity, Gif_Search.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md576290e4b9fc65ea13d4138b2a4858d3e.MainActivity
 Pokedex.Droid.MainActivity;md576290e4b9fc65ea13d4138b2a4858d3e.MainActivity
 pokedex.droid.MainActivity;md576290e4b9fc65ea13d4138b2a4858d3e.MainActivity
+Pokedex.Droid.SplashActivity, Gif_Search.Android;md576290e4b9fc65ea13d4138b2a4858d3e.SplashActivity
+Pokedex.Droid.SplashActivity, Gif_Search.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md576290e4b9fc65ea13d4138b2a4858d3e.SplashActivity
+Pokedex.Droid.SplashActivity;md576290e4b9fc65ea13d4138b2a4858d3e.SplashActivity
+pokedex.droid.SplashActivity;md576290e4b9fc65ea13d4138b2a4858d3e.SplashActivity
 Android.Support.Design.Widget.Snackbar/SnackbarActionClickImplementor, Xamarin.Android.Support.Design;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar+SnackbarActionClickImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar.SnackbarActionClickImplementor;android.support.design.widget.Snackbar_SnackbarActionClickImplementor

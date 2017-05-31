@@ -29,8 +29,8 @@ namespace Pokedex.Views
 			// Manually deselect item
 			ItemsListView.SelectedItem = null;
 		}
-
-		async void AddItem_Clicked(object sender, EventArgs e)
+      
+		async void AboutUs_Clicked(object sender, EventArgs e)
 		{
 			await Navigation.PushAsync(new NewItemPage());
 		}

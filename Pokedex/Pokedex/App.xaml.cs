@@ -23,14 +23,9 @@ namespace Pokedex
                 {
                     new NavigationPage(new ItemsPage())
                     {
-                        Title = "Browse",
-                        Icon = Device.OnPlatform<string>("tab_feed.png",null,null)
-                    },
-                    new NavigationPage(new AboutPage())
-                    {
-                        Title = "About",
-                        Icon = Device.OnPlatform<string>("tab_about.png",null,null)
-                    },
+                        Title = "",
+                        Icon = Device.OnPlatform<string>("pokeballs.png","pokeballs.png","pokeballs.png")
+                    }
                 }
             };
         }

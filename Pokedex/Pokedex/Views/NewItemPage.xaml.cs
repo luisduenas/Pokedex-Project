@@ -13,7 +13,6 @@ namespace Pokedex.Views
 		public NewItemPage()
 		{
 			InitializeComponent();
-
 			Item = new Item
 			{
 				Name = "Item name",
@@ -21,11 +20,16 @@ namespace Pokedex.Views
 			};
 
 			BindingContext = this;
-		}
+            var tapGestureRecognizer = new TapGestureRecognizer();
+            tapGestureRecognizer.Tapped += (s, e) => {
+                Device.OpenUri(new Uri(((Label)s).Text));
+            };
+            github.GestureRecognizers.Add(tapGestureRecognizer);
+        }
 
-		async void Save_Clicked(object sender, EventArgs e)
+		async void GoBack_Clicked(object sender, EventArgs e)
 		{
-			MessagingCenter.Send(this, "AddItem", Item);
+			MessagingCenter.Send(this, "AboutUs", Item);
 			await Navigation.PopToRootAsync();
 		}
 	}

@@ -24258,14 +24258,14 @@
     "UAP,Version=v10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Luis Duenas\\.nuget\\packages\\": {}
+    "C:\\Users\\Luis Dueñas\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Pokedex\\Pokedex\\Pokedex.UWP\\Pokedex.UWP.csproj",
+      "projectUniqueName": "C:\\Pokedex-Project\\Pokedex\\Pokedex.UWP\\Pokedex.UWP.csproj",
       "projectName": "Pokedex.UWP",
-      "projectPath": "C:\\Pokedex\\Pokedex\\Pokedex.UWP\\Pokedex.UWP.csproj",
-      "projectJsonPath": "C:\\Pokedex\\Pokedex\\Pokedex.UWP\\project.json",
+      "projectPath": "C:\\Pokedex-Project\\Pokedex\\Pokedex.UWP\\Pokedex.UWP.csproj",
+      "projectJsonPath": "C:\\Pokedex-Project\\Pokedex\\Pokedex.UWP\\project.json",
       "projectStyle": "ProjectJson"
     },
     "dependencies": {

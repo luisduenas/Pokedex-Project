@@ -1,0 +1,1 @@
+C:\Pokedex-Project\Pokedex\Pokedex.UWP\Pokedex.UWP.csproj;x86

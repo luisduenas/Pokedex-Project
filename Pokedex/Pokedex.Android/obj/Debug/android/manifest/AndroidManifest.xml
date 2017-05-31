@@ -4,8 +4,9 @@
   <uses-sdk android:minSdkVersion="15" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-  <application android:label="Pokedex.Android" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
-    <activity android:configChanges="orientation|screenSize" android:label="Pokedex.Android" android:theme="@style/MyTheme" android:name="md576290e4b9fc65ea13d4138b2a4858d3e.MainActivity">
+  <application android:theme="@android:style/Theme.DeviceDefault" android:label="Pokedex Project" android:icon="@drawable/ic_launcher" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:configChanges="orientation|screenSize" android:label="Pokedex.Android" android:theme="@style/MyTheme" android:name="md576290e4b9fc65ea13d4138b2a4858d3e.MainActivity" />
+    <activity android:noHistory="true" android:theme="@style/MyTheme.Splash" android:name="md576290e4b9fc65ea13d4138b2a4858d3e.SplashActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

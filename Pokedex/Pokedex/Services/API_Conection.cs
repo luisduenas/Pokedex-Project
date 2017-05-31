@@ -30,7 +30,7 @@ namespace Pokedex.Services
 
             foreach (var data in root.pokemon)
             {
-                items.Add(new Item { Id = Guid.NewGuid().ToString(), Name = "Nombre: " + data.name, Height = "Estatura: " + data.height, Weight = "Peso: " + data.weight, Weaknesses = data.weaknesses, Type1 = "Tipo 1: " + data.type[0], Type2 =  data.type.Length > 1 ? "Tipo 2: " + data.type[1] : "Tipo 2: -----", Source = data.img });
+                items.Add(new Item { Id = Guid.NewGuid().ToString(), Name = data.name, Height = data.height, Weight = data.weight, Weaknesses = data.weaknesses, Type1 = data.type[0], Type2 =  data.type.Length > 1 ? data.type[1] : "-----", Num = int.Parse(data.num), Source = data.img });
             }
             return items;
         }
