@@ -7,10 +7,10 @@ Se realizara una aplicacion movil multiplataforma para consultar los pokemon dis
 
 * ¿A que mercado o sector va dirigido?
 
-A los fanaticos y nostalgicos de los videojuegos, requieren obtener informacion de los distintos pokemon
+A los fanaticos y nostalgicos de los videojuegos, o que requieren obtener informacion de los distintos pokemon
 
 * ¿Que pasos tienes que realizar o cubrir para poder consumir información a partir del conjunto de datos seleccionado?
-    Al realizar la aplicacion en C#, hacemos uso del paquete Httplient para obtener el dataset y manipularlo
+    Al realizar la aplicacion en C#, hacemos uso del paquete HttpClient para obtener el dataset y manipularlo
 
 ```c#
 
