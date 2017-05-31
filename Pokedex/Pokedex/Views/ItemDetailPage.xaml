@@ -2,10 +2,41 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Pokedex.Views.ItemDetailPage"
-             Title="{Binding Title}">
-	<StackLayout Spacing="20" Padding="15">
-		<Label Text="{Binding Item.Text}" FontSize="Medium"/>
-        <Label Text="{Binding Item.Description}" FontSize="Small"/>
-        <Image Source="{Binding Item.Source}"></Image>
+             Title="{Binding Title}"
+             BackgroundColor="Black">
+    <StackLayout Padding="15">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="{Binding Item.Source}" Grid.ColumnSpan="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"></Image>
+            <StackLayout Grid.Row="1">
+                <Label Text="General Info" FontSize="Medium" TextColor="White"/>
+                <Label Text="{Binding Item.Name, StringFormat='Name:  {0:N}']}" FontSize="Small" TextColor="White"/>
+                <Label Text="{Binding Item.Height, StringFormat='Height:  {0:N}']}" FontSize="Small" TextColor="White"/>
+                <Label Text="{Binding Item.Weight, StringFormat='Weight:  {0:N}']}" FontSize="Small" TextColor="White"/>
+                <Label Text="{Binding Item.Num, StringFormat='Pokedex #:  {0}']}" FontSize="Small" TextColor="White"/>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Grid.Column="1">
+                <Label Text="Weaknesses" FontSize="Medium" TextColor="White"/>
+                <Label Text="{Binding Item.Weaknesses[0]}" FontSize="Small" TextColor="White"/>
+                <Label Text="{Binding Item.Weaknesses[1]}" FontSize="Small" TextColor="White"/>
+                <Label Text="{Binding Item.Weaknesses[2]}" FontSize="Small" TextColor="White"/>
+                <Label Text="{Binding Item.Weaknesses[3]}" FontSize="Small" TextColor="White"/>
+            </StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </Grid>
     </StackLayout>
 </ContentPage>

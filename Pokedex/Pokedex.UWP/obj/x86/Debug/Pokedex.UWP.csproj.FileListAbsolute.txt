@@ -9,7 +9,6 @@ C:\Pokedex-Project\Pokedex\Pokedex.UWP\obj\x86\Debug\App.xbf
 C:\Pokedex-Project\Pokedex\Pokedex.UWP\obj\x86\Debug\MainPage.xbf
 C:\Pokedex-Project\Pokedex\Pokedex.UWP\obj\x86\Debug\XamlSaveStateFile.xml
 C:\Pokedex-Project\Pokedex\Pokedex.UWP\obj\x86\Debug\Pokedex.UWP.C_.Pokedex_Project.Pokedex.Pokedex.App.xaml.g.cs
-C:\Pokedex-Project\Pokedex\Pokedex.UWP\obj\x86\Debug\Pokedex.UWP.C_.Pokedex_Project.Pokedex.Pokedex.Views.AboutPage.xaml.g.cs
 C:\Pokedex-Project\Pokedex\Pokedex.UWP\obj\x86\Debug\Pokedex.UWP.C_.Pokedex_Project.Pokedex.Pokedex.Views.ItemsPage.xaml.g.cs
 C:\Pokedex-Project\Pokedex\Pokedex.UWP\obj\x86\Debug\Pokedex.UWP.C_.Pokedex_Project.Pokedex.Pokedex.Views.ItemDetailPage.xaml.g.cs
 C:\Pokedex-Project\Pokedex\Pokedex.UWP\obj\x86\Debug\Pokedex.UWP.C_.Pokedex_Project.Pokedex.Pokedex.Views.NewItemPage.xaml.g.cs

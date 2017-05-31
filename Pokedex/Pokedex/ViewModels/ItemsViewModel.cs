@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+**********************
+* Author: luisduenas * 
+* Date: May 31 2017  *
+**********************
+ */
+using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Pokedex.Helpers;
@@ -19,6 +25,7 @@ namespace Pokedex.ViewModels
 
     public class ItemsViewModel : BaseViewModel
     {
+        //Variables Globales
         public ObservableRangeCollection<Item> Items { get; set; }
         ObservableRangeCollection<Item> pokemonSource = new ObservableRangeCollection<Item>();
         public ObservableRangeCollection<string> PokemonTypes { get; set; }
@@ -99,8 +106,8 @@ namespace Pokedex.ViewModels
                 }
             }
         }
-        public Command SearchCommand { get; }
-
+        public Command SearchCommand { get; } 
+        //Constructor
         public ItemsViewModel()
         {
             Title = "Pokedex";
@@ -110,11 +117,91 @@ namespace Pokedex.ViewModels
             SearchCommand = new Command(async () => await ExecuteSearchCommand());
             getPokemonSource();
         }
+        //Metodos de carga
+        private async void getPokemonSource()
+        {
+            try
+            {
+                Items.Clear();
+                API_Conection conexion = new API_Conection();
+                var items = await conexion.getApiResults(SearchText);
+                Items.ReplaceRange(items);
+                pokemonSource.ReplaceRange(items);
+                getPokemonTypes();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                MessagingCenter.Send(new MessagingCenterAlert
+                {
+                    Title = "Error",
+                    Message = "Unable to load items.",
+                    Cancel = "OK"
+                }, "message");
+            }
+        }
+        private void getPokemonTypes()
+        {
+            bool existType1 = false;
+            bool existType2 = false;
+            PokemonTypes.Add("All");
+            foreach (Item pkms in Items)
+            {
+                foreach (string item in PokemonTypes)
+                {
+                    if (pkms.Type1 != "-----")
+                    {
+                        if (item == pkms.Type1)
+                        {
+                            existType1 = true;
+                        }
+                        else
+                        {
+                            existType1 = false;
+                        }
+                    }
+                    else
+                    {
+                        existType1 = true;
+                    }
+                    if (pkms.Type2 != "-----")
+                    {
 
+                        if (item == pkms.Type2)
+                        {
+                            existType2 = true;
+                        }
+                        else
+                        {
+                            existType2 = false;
+                        }
+                    }
+                    else
+                    {
+                        existType2 = true;
+                    }
+                }
+                if (!existType1)
+                {
+                    PokemonTypes.Add(pkms.Type1);
+                }
+                if (!existType2)
+                {
+                    PokemonTypes.Add(pkms.Type2);
+                }
+            }
+            var lista = PokemonTypes.Distinct().ToList().OrderBy(o => o).ToList();
+            PokemonTypes.ReplaceRange(lista);
+        }
+        //Eventos
         private void SelectedPokemon_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
         }
-
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+        //Administracion
         private void filtraPorTipo1()
         {
             string tipo1 = PokemonTypes[SelectedType1];
@@ -180,84 +267,6 @@ namespace Pokedex.ViewModels
                 Items.ReplaceRange(lista);
             }
         }
-
-        private async void getPokemonSource()
-        {
-            try
-            {
-                Items.Clear();
-                API_Conection conexion = new API_Conection();
-                var items = await conexion.getApiResults(SearchText);
-                Items.ReplaceRange(items);
-                pokemonSource.ReplaceRange(items);
-                getPokemonTypes();
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
-                MessagingCenter.Send(new MessagingCenterAlert
-                {
-                    Title = "Error",
-                    Message = "Unable to load items.",
-                    Cancel = "OK"
-                }, "message");
-            }
-        }
-
-        private void getPokemonTypes()
-        {
-            bool existType1 = false;
-            bool existType2 = false;
-            PokemonTypes.Add("All");
-            foreach (Item pkms in Items)
-            {
-                foreach (string item in PokemonTypes)
-                {
-                    if (pkms.Type1 != "-----")
-                    {
-                        if (item == pkms.Type1)
-                        {
-                            existType1 = true;
-                        }
-                        else
-                        {
-                            existType1 = false;
-                        }
-                    }
-                    else
-                    {
-                        existType1 = true;
-                    }
-                    if (pkms.Type2 != "-----")
-                    {
-
-                        if (item == pkms.Type2)
-                        {
-                            existType2 = true;
-                        }
-                        else
-                        {
-                            existType2 = false;
-                        }
-                    }
-                    else
-                    {
-                        existType2 = true;
-                    }
-                }
-                if (!existType1)
-                {
-                    PokemonTypes.Add(pkms.Type1);
-                }
-                if (!existType2)
-                {
-                    PokemonTypes.Add(pkms.Type2);
-                }
-            }
-            var lista = PokemonTypes.Distinct().ToList().OrderBy(o => o).ToList();
-            PokemonTypes.ReplaceRange(lista);
-        }
-
         async Task ExecuteSearchCommand()
         {
             if (!string.IsNullOrWhiteSpace(SearchText))
@@ -285,11 +294,5 @@ namespace Pokedex.ViewModels
                 }
             }
         }
-
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
     }
 }

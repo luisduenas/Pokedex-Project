@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+**********************
+* Author: luisduenas * 
+* Date: May 31 2017  *
+**********************
+ */
+using System;
 
 using Pokedex.Models;
 using Pokedex.ViewModels;
@@ -9,15 +15,16 @@ namespace Pokedex.Views
 {
 	public partial class ItemsPage : ContentPage
 	{
+        //Variables
 		ItemsViewModel viewModel;
-
+        //Constructor
 		public ItemsPage()
 		{
 			InitializeComponent();
 
 			BindingContext = viewModel = new ItemsViewModel();
 		}
-
+        //Eventos
 		async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
 		{
 			var item = args.SelectedItem as Item;
@@ -29,12 +36,11 @@ namespace Pokedex.Views
 			// Manually deselect item
 			ItemsListView.SelectedItem = null;
 		}
-      
 		async void AboutUs_Clicked(object sender, EventArgs e)
 		{
 			await Navigation.PushAsync(new NewItemPage());
 		}
-
+        //Override
 		protected override void OnAppearing()
 		{
 			base.OnAppearing();

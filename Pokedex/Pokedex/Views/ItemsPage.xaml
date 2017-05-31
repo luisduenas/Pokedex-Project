@@ -13,14 +13,14 @@
             <Label Text="Filter by:" FontSize="22" TextColor="White"/>
         </StackLayout>
         <StackLayout Orientation="Horizontal">
-            <Picker Title="Type1:" BackgroundColor="White"  ItemsSource="{Binding PokemonTypes}" SelectedIndex="{Binding SelectedType1}" HorizontalOptions="FillAndExpand"></Picker>
-            <Picker Title="Type2:" BackgroundColor="White" ItemsSource="{Binding PokemonTypes}" SelectedIndex="{Binding SelectedType2}" HorizontalOptions="FillAndExpand"></Picker>
+            <Picker Title="Type1:" ItemsSource="{Binding PokemonTypes}" SelectedIndex="{Binding SelectedType1}" HorizontalOptions="FillAndExpand"></Picker>
+            <Picker Title="Type2:" ItemsSource="{Binding PokemonTypes}" SelectedIndex="{Binding SelectedType2}" HorizontalOptions="FillAndExpand"></Picker>
         </StackLayout>
         <StackLayout Orientation="Horizontal">
             <Label Text="Order by:" FontSize="22" TextColor="White"/>
         </StackLayout>
         <StackLayout>
-            <Picker Title="Order by:" BackgroundColor="White" HorizontalOptions="FillAndExpand" SelectedIndex="{Binding SelectedOrder}">
+            <Picker Title="Order by:" HorizontalOptions="FillAndExpand" SelectedIndex="{Binding SelectedOrder}">
                 <Picker.Items>
                     <x:String>Number</x:String>
                     <x:String>Alphabetically</x:String>

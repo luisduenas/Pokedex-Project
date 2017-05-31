@@ -1,6 +1,5 @@
 C:\Pokedex-Project\Pokedex\Pokedex.Android\obj\Debug\Pokedex.Android.csprojResolveAssemblyReference.cache
 C:\Pokedex-Project\Pokedex\Pokedex.Android\obj\Debug\Pokedex.Droid.App.xaml.g.cs
-C:\Pokedex-Project\Pokedex\Pokedex.Android\obj\Debug\Pokedex.Droid.Views.AboutPage.xaml.g.cs
 C:\Pokedex-Project\Pokedex\Pokedex.Android\obj\Debug\Pokedex.Droid.Views.ItemsPage.xaml.g.cs
 C:\Pokedex-Project\Pokedex\Pokedex.Android\obj\Debug\Pokedex.Droid.Views.ItemDetailPage.xaml.g.cs
 C:\Pokedex-Project\Pokedex\Pokedex.Android\obj\Debug\Pokedex.Droid.Views.NewItemPage.xaml.g.cs

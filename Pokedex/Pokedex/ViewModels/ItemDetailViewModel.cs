@@ -1,4 +1,10 @@
-﻿using Pokedex.Models;
+﻿/*
+**********************
+* Author: luisduenas * 
+* Date: May 31 2017  *
+**********************
+ */
+using Pokedex.Models;
 
 namespace Pokedex.ViewModels
 {
@@ -10,7 +16,6 @@ namespace Pokedex.ViewModels
 			Title = item.Name;
 			Item = item;
 		}
-
 		int quantity = 1;
 		public int Quantity
 		{
